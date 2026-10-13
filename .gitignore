@@ -9,3 +9,10 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+# CIFAR-10 download (re-created by train_cnn.py)
+data/
+
+# local helper scripts/logs (not part of the submission)
+_run_*.command
+_a2_*
