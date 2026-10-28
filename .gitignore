@@ -16,3 +16,4 @@ data/
 # local helper scripts/logs (not part of the submission)
 _run_*.command
 _a2_*
+_a3_*
