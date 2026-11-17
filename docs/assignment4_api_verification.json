@@ -1,0 +1,248 @@
+{
+  "server": "http://127.0.0.1:8014",
+  "checks": 27,
+  "passed": true,
+  "checkpoints": {
+    "energy": {
+      "model": "energy",
+      "dataset": "CIFAR-10",
+      "training_images": 50000,
+      "image_shape": [
+        3,
+        32,
+        32
+      ],
+      "batch_size": 128,
+      "seed": 42,
+      "device": "cpu",
+      "torch_version": "2.14.1",
+      "normalization": "x / 127.5 - 1",
+      "timesteps": 1000,
+      "base_channels": 24,
+      "langevin_steps": 30,
+      "step_size": 10.0,
+      "noise_std": 0.005,
+      "regularization": 0.1,
+      "replay_buffer_size": 1024,
+      "restart_probability": 0.05,
+      "learning_rate": 0.0001,
+      "epochs": 1
+    },
+    "diffusion": {
+      "model": "diffusion",
+      "dataset": "CIFAR-10",
+      "training_images": 50000,
+      "image_shape": [
+        3,
+        32,
+        32
+      ],
+      "batch_size": 128,
+      "seed": 42,
+      "device": "cpu",
+      "torch_version": "2.14.1",
+      "normalization": "x / 127.5 - 1",
+      "timesteps": 1000,
+      "base_channels": 24,
+      "langevin_steps": 30,
+      "step_size": 10.0,
+      "noise_std": 0.005,
+      "regularization": 0.1,
+      "replay_buffer_size": 1024,
+      "restart_probability": 0.05,
+      "learning_rate": 0.0002,
+      "epochs": 1
+    }
+  },
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.001,
+      "bytes": 17
+    },
+    {
+      "path": "/generators/info",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.035,
+      "bytes": 797
+    },
+    {
+      "path": "/diffusion/generate?num_samples=4&steps=100&seed=7",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.646,
+      "bytes": 18855
+    },
+    {
+      "path": "/diffusion/generate/pixels?num_samples=1&steps=100&seed=7",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.24,
+      "bytes": 46358
+    },
+    {
+      "path": "/diffusion/generate?num_samples=4&steps=100&seed=7",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.57,
+      "bytes": 18855
+    },
+    {
+      "path": "/diffusion/generate?num_samples=4&steps=100&seed=8",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.543,
+      "bytes": 18968
+    },
+    {
+      "path": "/diffusion/generate?num_samples=0",
+      "status": 422,
+      "expected": 422,
+      "seconds": 0.002,
+      "bytes": 150
+    },
+    {
+      "path": "/diffusion/generate?num_samples=17",
+      "status": 422,
+      "expected": 422,
+      "seconds": 0.001,
+      "bytes": 147
+    },
+    {
+      "path": "/diffusion/generate?steps=9999",
+      "status": 422,
+      "expected": 422,
+      "seconds": 0.001,
+      "bytes": 145
+    },
+    {
+      "path": "/diffusion/generate?seed=-1",
+      "status": 422,
+      "expected": 422,
+      "seconds": 0.001,
+      "bytes": 144
+    },
+    {
+      "path": "/energy/generate?num_samples=4&steps=256&seed=7",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.177,
+      "bytes": 19342
+    },
+    {
+      "path": "/energy/generate/pixels?num_samples=1&steps=256&seed=7",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.082,
+      "bytes": 56596
+    },
+    {
+      "path": "/energy/generate?num_samples=4&steps=256&seed=7",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.168,
+      "bytes": 19342
+    },
+    {
+      "path": "/energy/generate?num_samples=4&steps=256&seed=8",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.171,
+      "bytes": 19364
+    },
+    {
+      "path": "/energy/generate?num_samples=0",
+      "status": 422,
+      "expected": 422,
+      "seconds": 0.001,
+      "bytes": 150
+    },
+    {
+      "path": "/energy/generate?num_samples=17",
+      "status": 422,
+      "expected": 422,
+      "seconds": 0.001,
+      "bytes": 147
+    },
+    {
+      "path": "/energy/generate?steps=9999",
+      "status": 422,
+      "expected": 422,
+      "seconds": 0.001,
+      "bytes": 145
+    },
+    {
+      "path": "/energy/generate?seed=-1",
+      "status": 422,
+      "expected": 422,
+      "seconds": 0.001,
+      "bytes": 144
+    },
+    {
+      "path": "/openapi.json",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.004,
+      "bytes": 8598
+    },
+    {
+      "path": "/docs",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.001,
+      "bytes": 1020
+    },
+    {
+      "path": "/generate",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.001,
+      "bytes": 49
+    },
+    {
+      "path": "/embedding",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.004,
+      "bytes": 6088
+    },
+    {
+      "path": "/classify/classes",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.001,
+      "bytes": 93
+    },
+    {
+      "path": "/gan/generate?num_samples=4&seed=7",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.005,
+      "bytes": 4097
+    },
+    {
+      "path": "/gan/generate/pixels?num_samples=1&seed=7",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.003,
+      "bytes": 4479
+    },
+    {
+      "path": "/classify",
+      "status": 200,
+      "expected": 200,
+      "seconds": 0.004,
+      "bytes": 229
+    },
+    {
+      "path": "/classify",
+      "status": 400,
+      "expected": 400,
+      "seconds": 0.047,
+      "bytes": 50
+    }
+  ]
+}

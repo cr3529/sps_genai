@@ -1,0 +1,36 @@
+{
+  "embedding_t1_dim8": [
+    0.8414709568023682,
+    0.5403023362159729,
+    0.0998334139585495,
+    0.9950041770935059,
+    0.009999833069741726,
+    0.9999499917030334,
+    0.0009999998146668077,
+    0.9999995231628418
+  ],
+  "q6_gradient": [
+    7.0
+  ],
+  "q6_no_tracking_error": "element 0 of tensors does not require grad and does not have a grad_fn",
+  "default_requires_grad": false,
+  "q7_original": {
+    "x_grad": [
+      7.0
+    ],
+    "w_grad": null
+  },
+  "q7_weight_gradient": [
+    4.0,
+    2.0
+  ],
+  "q8_detach_error": "element 0 of tensors does not require grad and does not have a grad_fn",
+  "q8_fixed_gradient": [
+    6.0
+  ],
+  "q9_gradients": [
+    2.0,
+    5.0,
+    3.0
+  ]
+}

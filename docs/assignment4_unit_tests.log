@@ -1,0 +1,12 @@
+test_diffusion_forward_and_schedule (test_assignment4.Assignment4Tests.test_diffusion_forward_and_schedule) ... ok
+test_embedding (test_assignment4.Assignment4Tests.test_embedding) ... ok
+test_energy_training_gradients_after_detached_sampling (test_assignment4.Assignment4Tests.test_energy_training_gradients_after_detached_sampling) ... ok
+test_factory_preserves_previous_models (test_assignment4.Assignment4Tests.test_factory_preserves_previous_models) ... ok
+test_langevin_lowers_energy_without_weight_gradients (test_assignment4.Assignment4Tests.test_langevin_lowers_energy_without_weight_gradients) ... ok
+test_sampling_range_and_seed (test_assignment4.Assignment4Tests.test_sampling_range_and_seed) ... ok
+test_unet_output_shape_and_parameter_gradients (test_assignment4.Assignment4Tests.test_unet_output_shape_and_parameter_gradients) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.155s
+
+OK

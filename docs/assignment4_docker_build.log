@@ -1,0 +1,308 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 595B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim-bookworm
+#2 DONE 0.9s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 108B done
+#3 DONE 0.0s
+
+#4 [ 1/10] FROM docker.io/library/python:3.12-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df
+#4 resolve docker.io/library/python:3.12-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df done
+#4 ...
+
+#5 [internal] load build context
+#5 transferring context: 15.02MB 0.1s done
+#5 DONE 0.1s
+
+#4 [ 1/10] FROM docker.io/library/python:3.12-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df
+#4 sha256:71cbc2473e6fbb6af0048cb7d7351ae3ce6fae71edd764a174d71719d03c122f 250B / 250B 0.1s done
+#4 sha256:be854b5286e5cbcf42b01e54b5ef98b3e80cc586e80fb695010a4d761a47099d 0B / 3.17MB 0.2s
+#4 sha256:147b27d82adbb763d3c607d635efef4531ff4a61559dfa5d32f9996f48a7bca3 0B / 13.61MB 0.2s
+#4 sha256:be854b5286e5cbcf42b01e54b5ef98b3e80cc586e80fb695010a4d761a47099d 3.17MB / 3.17MB 0.3s done
+#4 sha256:147b27d82adbb763d3c607d635efef4531ff4a61559dfa5d32f9996f48a7bca3 1.05MB / 13.61MB 0.3s
+#4 sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6 0B / 28.14MB 0.2s
+#4 sha256:147b27d82adbb763d3c607d635efef4531ff4a61559dfa5d32f9996f48a7bca3 5.24MB / 13.61MB 0.5s
+#4 sha256:147b27d82adbb763d3c607d635efef4531ff4a61559dfa5d32f9996f48a7bca3 9.44MB / 13.61MB 0.6s
+#4 sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6 2.10MB / 28.14MB 0.5s
+#4 sha256:147b27d82adbb763d3c607d635efef4531ff4a61559dfa5d32f9996f48a7bca3 12.58MB / 13.61MB 0.8s
+#4 sha256:147b27d82adbb763d3c607d635efef4531ff4a61559dfa5d32f9996f48a7bca3 13.61MB / 13.61MB 0.8s done
+#4 sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6 5.24MB / 28.14MB 0.9s
+#4 sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6 8.39MB / 28.14MB 1.1s
+#4 sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6 10.49MB / 28.14MB 1.2s
+#4 sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6 13.63MB / 28.14MB 1.4s
+#4 ...
+
+#6 [ 3/10] ADD https://astral.sh/uv/install.sh /uv-installer.sh
+#6 DONE 1.5s
+
+#4 [ 1/10] FROM docker.io/library/python:3.12-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df
+#4 sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6 17.83MB / 28.14MB 1.5s
+#4 sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6 20.97MB / 28.14MB 1.7s
+#4 sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6 25.17MB / 28.14MB 1.8s
+#4 sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6 28.14MB / 28.14MB 1.9s done
+#4 extracting sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6
+#4 extracting sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6 0.4s done
+#4 DONE 2.3s
+
+#4 [ 1/10] FROM docker.io/library/python:3.12-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df
+#4 extracting sha256:be854b5286e5cbcf42b01e54b5ef98b3e80cc586e80fb695010a4d761a47099d 0.1s done
+#4 extracting sha256:147b27d82adbb763d3c607d635efef4531ff4a61559dfa5d32f9996f48a7bca3
+#4 extracting sha256:147b27d82adbb763d3c607d635efef4531ff4a61559dfa5d32f9996f48a7bca3 0.2s done
+#4 DONE 2.6s
+
+#4 [ 1/10] FROM docker.io/library/python:3.12-slim-bookworm@sha256:935c3c5b12357a7e10caa9c1e6ca5692344d97cf229832ef584be2cec9fc03df
+#4 extracting sha256:71cbc2473e6fbb6af0048cb7d7351ae3ce6fae71edd764a174d71719d03c122f done
+#4 DONE 2.6s
+
+#7 [ 2/10] RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates
+#7 0.190 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#7 0.311 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#7 0.376 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+#7 0.420 Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8689 kB]
+#7 2.726 Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [6936 B]
+#7 2.745 Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [375 kB]
+#7 3.236 Fetched 9312 kB in 3s (2947 kB/s)
+#7 3.236 Reading package lists...
+#7 3.429 Reading package lists...
+#7 3.622 Building dependency tree...
+#7 3.673 Reading state information...
+#7 3.733 ca-certificates is already the newest version (20250419~deb12u2).
+#7 3.733 The following additional packages will be installed:
+#7 3.733   libbrotli1 libcurl4 libldap-2.5-0 libnghttp2-14 libpsl5 librtmp1 libsasl2-2
+#7 3.733   libsasl2-modules-db libssh2-1
+#7 3.733 Recommended packages:
+#7 3.733   libldap-common publicsuffix libsasl2-modules
+#7 3.765 The following NEW packages will be installed:
+#7 3.765   curl libbrotli1 libcurl4 libldap-2.5-0 libnghttp2-14 libpsl5 librtmp1
+#7 3.765   libsasl2-2 libsasl2-modules-db libssh2-1
+#7 3.829 0 upgraded, 10 newly installed, 0 to remove and 0 not upgraded.
+#7 3.829 Need to get 1550 kB of archives.
+#7 3.829 After this operation, 4042 kB of additional disk space will be used.
+#7 3.829 Get:1 http://deb.debian.org/debian-security bookworm-security/main arm64 libbrotli1 arm64 1.0.9-2+deb12u1 [267 kB]
+#7 3.986 Get:2 http://deb.debian.org/debian-security bookworm-security/main arm64 libsasl2-modules-db arm64 2.1.28+dfsg-10+deb12u1 [21.0 kB]
+#7 3.993 Get:3 http://deb.debian.org/debian-security bookworm-security/main arm64 libsasl2-2 arm64 2.1.28+dfsg-10+deb12u1 [58.3 kB]
+#7 4.028 Get:4 http://deb.debian.org/debian bookworm/main arm64 libldap-2.5-0 arm64 2.5.13+dfsg-5 [171 kB]
+#7 4.099 Get:5 http://deb.debian.org/debian bookworm/main arm64 libnghttp2-14 arm64 1.52.0-1+deb12u3 [69.0 kB]
+#7 4.152 Get:6 http://deb.debian.org/debian bookworm/main arm64 libpsl5 arm64 0.21.2-1 [58.6 kB]
+#7 4.185 Get:7 http://deb.debian.org/debian bookworm/main arm64 librtmp1 arm64 2.4+20151223.gitfa8646d.1-2+b2 [59.4 kB]
+#7 4.227 Get:8 http://deb.debian.org/debian-security bookworm-security/main arm64 libssh2-1 arm64 1.10.0-3+deb12u1 [169 kB]
+#7 4.309 Get:9 http://deb.debian.org/debian bookworm/main arm64 libcurl4 arm64 7.88.1-10+deb12u15 [367 kB]
+#7 4.452 Get:10 http://deb.debian.org/debian bookworm/main arm64 curl arm64 7.88.1-10+deb12u15 [310 kB]
+#7 4.637 debconf: delaying package configuration, since apt-utils is not installed
+#7 4.648 Fetched 1550 kB in 1s (1928 kB/s)
+#7 4.654 Selecting previously unselected package libbrotli1:arm64.
+#7 4.654 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6695 files and directories currently installed.)
+#7 4.657 Preparing to unpack .../0-libbrotli1_1.0.9-2+deb12u1_arm64.deb ...
+#7 4.658 Unpacking libbrotli1:arm64 (1.0.9-2+deb12u1) ...
+#7 4.677 Selecting previously unselected package libsasl2-modules-db:arm64.
+#7 4.677 Preparing to unpack .../1-libsasl2-modules-db_2.1.28+dfsg-10+deb12u1_arm64.deb ...
+#7 4.678 Unpacking libsasl2-modules-db:arm64 (2.1.28+dfsg-10+deb12u1) ...
+#7 4.685 Selecting previously unselected package libsasl2-2:arm64.
+#7 4.686 Preparing to unpack .../2-libsasl2-2_2.1.28+dfsg-10+deb12u1_arm64.deb ...
+#7 4.687 Unpacking libsasl2-2:arm64 (2.1.28+dfsg-10+deb12u1) ...
+#7 4.697 Selecting previously unselected package libldap-2.5-0:arm64.
+#7 4.698 Preparing to unpack .../3-libldap-2.5-0_2.5.13+dfsg-5_arm64.deb ...
+#7 4.700 Unpacking libldap-2.5-0:arm64 (2.5.13+dfsg-5) ...
+#7 4.714 Selecting previously unselected package libnghttp2-14:arm64.
+#7 4.714 Preparing to unpack .../4-libnghttp2-14_1.52.0-1+deb12u3_arm64.deb ...
+#7 4.715 Unpacking libnghttp2-14:arm64 (1.52.0-1+deb12u3) ...
+#7 4.725 Selecting previously unselected package libpsl5:arm64.
+#7 4.726 Preparing to unpack .../5-libpsl5_0.21.2-1_arm64.deb ...
+#7 4.727 Unpacking libpsl5:arm64 (0.21.2-1) ...
+#7 4.737 Selecting previously unselected package librtmp1:arm64.
+#7 4.738 Preparing to unpack .../6-librtmp1_2.4+20151223.gitfa8646d.1-2+b2_arm64.deb ...
+#7 4.740 Unpacking librtmp1:arm64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+#7 4.752 Selecting previously unselected package libssh2-1:arm64.
+#7 4.752 Preparing to unpack .../7-libssh2-1_1.10.0-3+deb12u1_arm64.deb ...
+#7 4.754 Unpacking libssh2-1:arm64 (1.10.0-3+deb12u1) ...
+#7 4.767 Selecting previously unselected package libcurl4:arm64.
+#7 4.768 Preparing to unpack .../8-libcurl4_7.88.1-10+deb12u15_arm64.deb ...
+#7 4.769 Unpacking libcurl4:arm64 (7.88.1-10+deb12u15) ...
+#7 4.788 Selecting previously unselected package curl.
+#7 4.789 Preparing to unpack .../9-curl_7.88.1-10+deb12u15_arm64.deb ...
+#7 4.789 Unpacking curl (7.88.1-10+deb12u15) ...
+#7 4.812 Setting up libpsl5:arm64 (0.21.2-1) ...
+#7 4.815 Setting up libbrotli1:arm64 (1.0.9-2+deb12u1) ...
+#7 4.816 Setting up libnghttp2-14:arm64 (1.52.0-1+deb12u3) ...
+#7 4.818 Setting up libsasl2-modules-db:arm64 (2.1.28+dfsg-10+deb12u1) ...
+#7 4.820 Setting up librtmp1:arm64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+#7 4.821 Setting up libsasl2-2:arm64 (2.1.28+dfsg-10+deb12u1) ...
+#7 4.824 Setting up libssh2-1:arm64 (1.10.0-3+deb12u1) ...
+#7 4.827 Setting up libldap-2.5-0:arm64 (2.5.13+dfsg-5) ...
+#7 4.831 Setting up libcurl4:arm64 (7.88.1-10+deb12u15) ...
+#7 4.833 Setting up curl (7.88.1-10+deb12u15) ...
+#7 4.835 Processing triggers for libc-bin (2.36-9+deb12u14) ...
+#7 DONE 5.0s
+
+#8 [ 3/10] ADD https://astral.sh/uv/install.sh /uv-installer.sh
+#8 DONE 0.0s
+
+#9 [ 4/10] RUN sh /uv-installer.sh && rm /uv-installer.sh
+#9 0.063 downloading uv 0.13.9 aarch64-unknown-linux-gnu
+#9 1.501 installing to /root/.local/bin
+#9 1.505   uv
+#9 1.505   uvx
+#9 1.507 everything's installed!
+#9 1.518 
+#9 1.518 To add $HOME/.local/bin to your PATH, either restart your shell or run:
+#9 1.518 
+#9 1.518     source $HOME/.local/bin/env (sh, bash, zsh)
+#9 1.518     source $HOME/.local/bin/env.fish (fish)
+#9 DONE 1.5s
+
+#10 [ 5/10] WORKDIR /code
+#10 DONE 0.0s
+
+#11 [ 6/10] COPY pyproject.toml uv.lock /code/
+#11 DONE 0.0s
+
+#12 [ 7/10] RUN uv sync --frozen
+#12 0.162 Using CPython 3.12.16 interpreter at: /usr/local/bin/python3
+#12 0.162 Creating virtual environment at: .venv
+#12 0.334 Downloading networkx (2.0MiB)
+#12 0.365 Downloading pydantic-core (1.9MiB)
+#12 0.366 Downloading sympy (6.0MiB)
+#12 0.367 Downloading uvloop (4.1MiB)
+#12 0.368 Downloading pygments (1.2MiB)
+#12 0.368 Downloading blis (2.7MiB)
+#12 0.369 Downloading spacy (33.3MiB)
+#12 0.369 Downloading pillow (6.0MiB)
+#12 0.370 Downloading kiwisolver (1.2MiB)
+#12 0.370 Downloading thinc (3.7MiB)
+#12 0.371 Downloading fonttools (5.2MiB)
+#12 0.371 Downloading numpy (15.0MiB)
+#12 0.372 Downloading srsly (1.2MiB)
+#12 0.372 Downloading matplotlib (10.2MiB)
+#12 0.449 Downloading torchvision (2.0MiB)
+#12 0.489 Downloading torch (151.9MiB)
+#12 0.519 Downloading en-core-web-lg (382.1MiB)
+#12 0.690  Downloaded torchvision
+#12 2.771  Downloaded srsly
+#12 2.793  Downloaded pygments
+#12 2.827  Downloaded kiwisolver
+#12 3.205  Downloaded pydantic-core
+#12 3.364  Downloaded networkx
+#12 3.651  Downloaded blis
+#12 4.039  Downloaded thinc
+#12 4.230  Downloaded uvloop
+#12 4.611  Downloaded fonttools
+#12 4.808  Downloaded pillow
+#12 4.817  Downloaded sympy
+#12 5.292  Downloaded matplotlib
+#12 5.919  Downloaded numpy
+#12 7.124  Downloaded spacy
+#12 11.55  Downloaded torch
+#12 20.08  Downloaded en-core-web-lg
+#12 20.08 Prepared 84 packages in 19.91s
+#12 20.61 Installed 84 packages in 534ms
+#12 20.61  + agent-detector==2.0.0
+#12 20.61  + annotated-doc==0.0.5
+#12 20.61  + annotated-types==0.8.0
+#12 20.61  + anyio==4.15.1
+#12 20.61  + blis==1.3.3
+#12 20.61  + catalogue==2.0.10
+#12 20.61  + certifi==2026.7.22
+#12 20.61  + charset-normalizer==3.5.1
+#12 20.61  + click==8.5.0
+#12 20.61  + cloudpathlib==0.25.0
+#12 20.61  + confection==1.3.3
+#12 20.61  + contourpy==1.4.0
+#12 20.61  + cycler==0.12.1
+#12 20.61  + cymem==2.0.13
+#12 20.61  + detect-installer==0.2.1
+#12 20.61  + dnspython==2.8.0
+#12 20.61  + email-validator==2.3.0
+#12 20.61  + en-core-web-lg==3.8.0 (from https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0-py3-none-any.whl)
+#12 20.61  + fastapi==0.141.1
+#12 20.61  + fastapi-cli==0.0.32
+#12 20.61  + fastapi-cloud-cli==0.26.0
+#12 20.61  + fastar==0.12.0
+#12 20.61  + filelock==4.1.1
+#12 20.61  + fonttools==4.68.0
+#12 20.61  + fsspec==2026.9.0
+#12 20.61  + h11==0.16.0
+#12 20.61  + httpcore==1.0.9
+#12 20.61  + httptools==0.8.0
+#12 20.61  + httpx==0.28.1
+#12 20.61  + idna==3.20
+#12 20.61  + jinja2==3.1.6
+#12 20.61  + kiwisolver==1.5.1
+#12 20.61  + markdown-it-py==4.2.0
+#12 20.61  + markupsafe==3.0.3
+#12 20.61  + matplotlib==3.11.2
+#12 20.61  + mdurl==0.1.2
+#12 20.61  + mpmath==1.3.0
+#12 20.61  + murmurhash==1.0.15
+#12 20.61  + networkx==3.7
+#12 20.61  + numpy==2.5.3
+#12 20.61  + packaging==26.3
+#12 20.61  + pillow==12.3.0
+#12 20.61  + preshed==3.0.13
+#12 20.61  + pydantic==2.13.5
+#12 20.61  + pydantic-core==2.46.5
+#12 20.61  + pydantic-extra-types==2.11.1
+#12 20.61  + pydantic-settings==2.15.0
+#12 20.61  + pygments==2.21.0
+#12 20.61  + pyparsing==3.3.3
+#12 20.61  + python-dateutil==3.0.0
+#12 20.61  + python-dotenv==1.2.3
+#12 20.61  + python-multipart==0.0.32
+#12 20.61  + pyyaml==6.0.3
+#12 20.61  + requests==2.34.2
+#12 20.61  + rich==15.0.0
+#12 20.61  + rich-toolkit==0.20.5
+#12 20.61  + rignore==0.8.1
+#12 20.61  + sentry-sdk==2.70.0
+#12 20.61  + setuptools==84.0.0
+#12 20.61  + shellingham==1.5.4
+#12 20.61  + six==1.17.0
+#12 20.61  + smart-open==8.0.1
+#12 20.61  + spacy==3.8.16
+#12 20.61  + spacy-legacy==3.0.12
+#12 20.61  + spacy-loggers==1.0.5
+#12 20.61  + srsly==2.5.4
+#12 20.61  + starlette==1.7.0
+#12 20.61  + sympy==1.14.0
+#12 20.61  + thinc==8.3.13
+#12 20.61  + torch==2.14.1+cpu
+#12 20.61  + torchvision==0.29.1+cpu
+#12 20.61  + tqdm==4.70.1
+#12 20.61  + typer==0.27.2
+#12 20.61  + typing-extensions==4.16.0
+#12 20.61  + typing-inspection==0.4.4
+#12 20.62  + tzdata==2026.6
+#12 20.62  + urllib3==2.8.0
+#12 20.62  + uvicorn==0.54.0
+#12 20.62  + uvloop==0.22.1
+#12 20.62  + wasabi==1.1.3
+#12 20.62  + watchfiles==1.3.0
+#12 20.62  + weasel==1.0.0
+#12 20.62  + websockets==17.1
+#12 20.62  + wrapt==2.5.0
+#12 DONE 20.8s
+
+#13 [ 8/10] COPY ./app /code/app
+#13 DONE 0.1s
+
+#14 [ 9/10] COPY ./helper_lib /code/helper_lib
+#14 DONE 0.0s
+
+#15 [10/10] COPY ./models /code/models
+#15 DONE 0.0s
+
+#16 exporting to image
+#16 exporting layers
+#16 exporting layers 27.6s done
+#16 exporting manifest sha256:4a39b112c5c65284d2659038f32728216c57cf053fac355b2873ceda9437f0ff done
+#16 exporting config sha256:06f1380bd500dab47badbb1c69767f11b88f35d2cafa1af75d2c54157274a821 done
+#16 exporting attestation manifest sha256:ac17faa437527343be3d1cf11b3d6fd739e085b193c6f8d4124caf8549b9511a done
+#16 exporting manifest list sha256:0d429310288325c6a6e4869d0fc8a5d260385fd583a4309787b68882a2e74554 done
+#16 naming to docker.io/library/sps-genai-assignment4:latest done
+#16 unpacking to docker.io/library/sps-genai-assignment4:latest
+#16 unpacking to docker.io/library/sps-genai-assignment4:latest 6.5s done
+#16 DONE 34.2s

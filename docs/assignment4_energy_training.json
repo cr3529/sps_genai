@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "model": "energy",
+    "dataset": "CIFAR-10",
+    "training_images": 50000,
+    "image_shape": [
+      3,
+      32,
+      32
+    ],
+    "batch_size": 128,
+    "seed": 42,
+    "device": "cpu",
+    "torch_version": "2.14.1",
+    "normalization": "x / 127.5 - 1",
+    "timesteps": 1000,
+    "base_channels": 24,
+    "langevin_steps": 30,
+    "step_size": 10.0,
+    "noise_std": 0.005,
+    "regularization": 0.1,
+    "replay_buffer_size": 1024,
+    "restart_probability": 0.05,
+    "learning_rate": 0.0001,
+    "epochs": 1
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "loss": -0.0045122529765963554,
+      "real_energy": -0.0039848222306557,
+      "fake_energy": 0.0018419371224939823,
+      "contrastive_loss": -0.005826759352684021,
+      "seconds": 651.19
+    }
+  ]
+}

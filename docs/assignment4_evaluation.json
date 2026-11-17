@@ -1,0 +1,14 @@
+{
+  "diffusion_noise_mse": 0.18632887306213378,
+  "zero_noise_predictor_mse": 1.0002424201965332,
+  "real_energy": 0.012019318673014642,
+  "uniform_noise_energy": 0.27902204990386964,
+  "held_out_images": 10000,
+  "sampling_initial_energy": 0.27890169620513916,
+  "sampling_final_energy": -0.17748136818408966,
+  "sampling_mean_pixel_change": 0.44779178500175476,
+  "checkpoint_epochs": {
+    "energy": 1,
+    "diffusion": 1
+  }
+}
