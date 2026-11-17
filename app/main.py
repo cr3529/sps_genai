@@ -1,4 +1,5 @@
 import spacy
+import torch
 from fastapi import FastAPI, File, HTTPException, Query, UploadFile
 from fastapi.responses import Response
 from PIL import UnidentifiedImageError
@@ -7,8 +8,11 @@ from pydantic import BaseModel
 from app.bigram_model import BigramModel
 from app.digit_generator import MAX_SAMPLES, DigitGenerator
 from app.image_classifier import CIFAR10_CLASSES, ImageClassifier
+from app.generative_routes import router as generative_router
 
-app = FastAPI()
+torch.set_num_threads(4)
+app = FastAPI(title="Applied Generative AI", version="4.0")
+app.include_router(generative_router)
 
 corpus = [
     "The Count of Monte Cristo is a novel written by Alexandre Dumas. It tells the story of Edmond Dantès, who is falsely imprisoned and later seeks revenge.",
