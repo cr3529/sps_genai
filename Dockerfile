@@ -15,4 +15,7 @@ COPY ./app /code/app
 COPY ./helper_lib /code/helper_lib
 COPY ./models /code/models
 
-CMD ["uv", "run", "fastapi", "run", "app/main.py", "--port", "80"]
+ENV OMP_NUM_THREADS=4
+ENV MKL_NUM_THREADS=4
+
+CMD ["uv", "run", "--frozen", "fastapi", "run", "app/main.py", "--host", "0.0.0.0", "--port", "80"]

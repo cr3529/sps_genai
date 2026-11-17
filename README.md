@@ -1,3 +1,76 @@
+# Assignment 4 Energy Based and Diffusion Image Generation
+
+This extends the existing Applied Generative AI API with two CIFAR-10 generators.
+The submitted checkpoints each completed one epoch over all 50,000 training images.
+Additional epochs were stopped to prioritize the submission deadline. Image fidelity is
+limited; these are small educational models rather than pretrained image generators.
+
+## Run the complete Docker deployment
+
+```bash
+docker build -t sps-genai-assignment4 .
+docker run --rm -p 8000:80 sps-genai-assignment4
+```
+
+Open http://127.0.0.1:8000/docs. All trained checkpoints are included in `models/`;
+server startup does not download CIFAR-10 or retrain models.
+
+```bash
+curl -o energy.png "http://127.0.0.1:8000/energy/generate?num_samples=4&steps=256&seed=7"
+curl -o diffusion.png "http://127.0.0.1:8000/diffusion/generate?num_samples=4&steps=100&seed=7"
+curl "http://127.0.0.1:8000/energy/generate/pixels?seed=7"
+curl "http://127.0.0.1:8000/diffusion/generate/pixels?seed=7"
+curl "http://127.0.0.1:8000/generators/info"
+```
+
+PNG endpoints return enlarged RGB image grids. Pixel endpoints return arrays in
+`[sample, channel, row, column]` order, with per-image shape `[3, 32, 32]` and
+values in `[0, 1]`. Requests accept 1-16 samples, diffusion accepts 2-200 steps,
+and energy sampling accepts 1-512 steps. The optional seed makes requests repeatable.
+Invalid query values return HTTP 422. Missing checkpoints return HTTP 503.
+
+## Training and verification
+
+```bash
+uv sync --frozen
+uv run python train_generative.py --model energy --epochs 1 --langevin-steps 30
+uv run python train_generative.py --model diffusion --epochs 1
+uv run python evaluate_generative.py
+uv run python verify_theory.py
+uv run python -m unittest discover -s tests -v
+uv run python verify_api.py --url http://127.0.0.1:8000
+```
+
+Training uses all 50,000 CIFAR-10 training images at native RGB 32x32 resolution,
+normalized to [-1, 1]. Evaluation uses all 10,000 test images. CIFAR-10 downloads
+only when a training/evaluation command needs it. Training seed is 42, sample seed is 7.
+The scripts support CPU, CUDA, or MPS when available. `--epochs` controls the number
+of complete passes. `--resume` continues from an optimizer/replay checkpoint saved
+under `data/` on the training machine; those large development files are not required
+for inference and are excluded from the submission.
+
+Energy training uses persistent contrastive divergence, a 1,024-image replay buffer,
+5% restarts, 30 Langevin steps per batch, step size 10, noise std 0.005, Adam lr 0.0001,
+and squared-energy regularization 0.1. The sampler differentiates energy with respect
+to pixels and detaches each update. Weight training uses detached negative samples.
+
+Diffusion uses a residual UNet with three down/up stages, sinusoidal timestep
+embeddings (maximum period 10000), 1,000 cosine-schedule timesteps, noise-prediction
+MSE, AdamW lr 0.0002, and EMA decay 0.995. Generation uses deterministic DDIM steps.
+Both models use batch size 128. The UNet has 893,235 trainable parameters plus a frozen
+EMA copy; the energy network has 77,793 parameters.
+
+`helper_lib.get_model("Energy")` and `get_model("Diffusion")` create the models.
+`train_energy`, `train_diffusion`, and `generate_samples` extend the reusable library.
+`load_model` accepts both earlier raw state dictionaries and the new checkpoint format.
+
+Worked answers: `docs/assignment4_theory.md`.
+Actual training history, held-out metrics, generated samples, and live Docker HTTP
+verification results are saved as `docs/assignment4_*` files.
+
+Implementation and Assignment 4 explanations prepared with assistance from OpenAI Codex.
+Previous assignment code and attribution follow below.
+
 # sps_genai: Applied Generative AI (APANPS5560)
 
 FastAPI app with a bigram text generator (Module 3), a spaCy word embedding endpoint (Assignment 1), a CNN image classifier trained on CIFAR-10 (Assignment 2) and a GAN that generates handwritten digits, trained on MNIST (Assignment 3).
