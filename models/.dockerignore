@@ -1,0 +1,9 @@
+.git
+.venv
+data
+__pycache__
+**/__pycache__
+*.pyc
+_a2_*
+_a3_*
+_run_*
