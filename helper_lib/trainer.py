@@ -5,6 +5,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
+from helper_lib.generative_training import train_diffusion, train_energy
+
 
 def train_model(model, data_loader, criterion, optimizer, device="cpu", epochs=10):
     """Standard supervised loop for FCNN / CNN / EnhancedCNN. Returns the trained model."""

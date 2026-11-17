@@ -1,10 +1,12 @@
-"""Model factory: get_model(name) returns one of FCNN, CNN, EnhancedCNN, VAE, GAN."""
+"""Factory for classifiers, VAE, GAN, energy, and diffusion models."""
 
 import torch
 import torch.nn as nn
 
 from app.cnn_model import AssignmentCNN
 from app.gan_model import GAN
+from app.energy_model import EnergyModel
+from app.diffusion_model import DiffusionModel
 
 
 class FCNN(nn.Module):
@@ -100,13 +102,16 @@ MODELS = {
     "ENHANCEDCNN": EnhancedCNN,
     "VAE": VAE,
     "GAN": GAN,  # the Assignment 3 spec'd GAN (Generator + Discriminator)
+    "ENERGY": EnergyModel,
+    "EBM": EnergyModel,
+    "DIFFUSION": DiffusionModel,
 }
 
 
 def get_model(model_name: str, **kwargs) -> nn.Module:
-    """Return a new, untrained model: one of FCNN, CNN, EnhancedCNN, VAE, GAN."""
+    """Return a new, untrained course model by name."""
     key = model_name.replace("_", "").replace("-", "").upper()
     if key not in MODELS:
-        raise ValueError(f"Unknown model '{model_name}'. Choose from: FCNN, CNN, EnhancedCNN, VAE, GAN")
+        raise ValueError(f"Unknown model '{model_name}'. Choose from: {', '.join(MODELS)}")
     model = MODELS[key](**kwargs)
     return model

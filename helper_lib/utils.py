@@ -21,7 +21,8 @@ def save_model(model: nn.Module, path: str | Path) -> None:
 
 
 def load_model(model: nn.Module, path: str | Path, device: str | torch.device = "cpu") -> nn.Module:
-    model.load_state_dict(torch.load(path, map_location=device, weights_only=True))
+    checkpoint = torch.load(path, map_location=device, weights_only=True)
+    model.load_state_dict(checkpoint.get("state_dict", checkpoint))
     model.to(device)
     model.eval()
     return model
